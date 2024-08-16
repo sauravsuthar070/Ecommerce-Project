@@ -9,18 +9,17 @@ const ShopCategory = (props) => {
 
   return (
     <div className="shop-category">
-      <img src={props.banner} alt="" />
+      <img className="shopCategory-banner" src={props.banner} alt="" />
       <div className="shopCategory-indexSort">
         <p>
           <span>Showing 1 to 12</span> out of 36 products
         </p>
         <div className="shopCategory-sort">
-          sort by <img src={dropdown_icon} alt="" />
+          sort by <img src={dropdown_icon} alt="" srcSet="" />
         </div>
       </div>
-      <div className="products">
-        {/* {all_product.map((item, i) => {
-          console.log(item);
+      <div className="Shopproducts">
+        {all_product.map((item, i) => {
           if (props.category === item.category) {
             return (
               <Item
@@ -32,29 +31,12 @@ const ShopCategory = (props) => {
                 old_price={item.old_price}
               />
             );
+          } else {
+            return null;
           }
-          return null;
-        })} */}
-
-{all_product.map((item) => {
-  console.log(item); // Check what this logs to ensure it's correct
-  
-  if (props.category === item.category) {
-    return (
-      <Item
-        key={item.id} // Preferably use a unique key like `item.id` if available
-        id={item.id}
-        name={item.name}
-        image={item.image}
-        new_price={item.new_price}
-        old_price={item.old_price}
-      />
-    );
-  }
-
-  return null; // Explicitly return null if the condition isn't met
-})}
+        })}
       </div>
+      <div className="shopcategory-loadmore">Explore More</div>
     </div>
   );
 };
