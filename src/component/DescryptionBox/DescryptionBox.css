@@ -1,0 +1,16 @@
+.descryptionbox{
+    margin: 120px 170px;
+}
+.descryptionbox-navigator{
+    display: flex;
+}
+.descryptionbox-nav-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 171px;
+    height: 70px;
+    border: 1px solid black;
+} 
